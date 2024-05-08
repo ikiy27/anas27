@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PenggunaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,14 @@ Route::get('/Selamat-Datang', function () {
     return view('Latihan.selamat');
 });
 
-Route::get('/Utama', function () {
+Route::get('/utama/utama', function () {
     return view('Latihan.index');
 });
-Route::get('/Utama/Borang', function () { //url browser
+Route::get('/utiliti/negeri', function () {
+    return view('Latihan.negeri');
+});
+Route::get('/utama/borang', function () { //url browser
     return view('Latihan.Pendaftaran'); // original path
 });
+
+Route::post('/utama/borang/simpan',[PenggunaController::class,'simpan']);
