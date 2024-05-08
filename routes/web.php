@@ -21,9 +21,9 @@ Route::get('/Selamat-Datang', function () {
     return view('Latihan.selamat');
 });
 
-Route::get('/Laman-Utama', function () {
+Route::get('/Utama', function () {
     return view('Latihan.index');
 });
-Route::get('/Borang', function () { //url browser
+Route::get('/Utama/Borang', function () { //url browser
     return view('Latihan.Pendaftaran'); // original path
 });
